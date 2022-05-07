@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'Pixel Emulator';
+    src: url('/PixelEmulator-xq08.ttf');
+}
+
+html {
+    font-family: 'Pixel Emulator';
+    background-color: black;
+    color: white;
+    font-size: 1.2em;
+}
+
+#text {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.text-line {
+    padding: 1em;
+    display: none;
+}
+#action {
+    font-size: 1.5em;
+}
+
+#next-story {
+    background-color: rgb(200, 80, 100);
+    color: white;
+}
+#next-story:hover {
+    cursor: pointer;
+}
