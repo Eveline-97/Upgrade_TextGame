@@ -24,10 +24,10 @@ if (action != null) {
 /*SHOW AND HIDE LINES*/
 const lines = document.getElementsByClassName('text-line');
 let count = 0;
-let interval = 1000;
+let interval = 6000;
 
 //Show and hide lines automatically
-let nextLine = () => {
+setInterval(function() {
     //Show next line
     if (count < lines.length) {
         let line = lines[count];
@@ -49,18 +49,7 @@ let nextLine = () => {
         changeInterval();                
     }
     window.scrollTo(0, document.body.scrollHeight);
-}
-
-//Change interval length depending on last line's length
-let changeInterval = () => {
-    let line = lines[count];
-    let strLength = line.innerHTML.length;
-    let newInterval = strLength * 100;
-    clearInterval(interval);
-    interval = setInterval(nextLine(), newInterval);
-}
-
-changeInterval();
+}, interval)
 
 //Event listeners for left and right arrow (only used for actions, but can also be used in between, if necessary)
 document.addEventListener('keydown', (e) => {
