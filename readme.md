@@ -18,5 +18,7 @@ In the installation, the website is projected on a computer screen. The audience
 
 
 index.html --- main folder and starting path of the game
+
 metallic.html --- part of the text game called 'metallic sound'
+
 violin.html ---- part of the text game called 'violin'
