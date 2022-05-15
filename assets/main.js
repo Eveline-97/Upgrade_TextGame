@@ -24,7 +24,7 @@ if (action != null) {
 /*SHOW AND HIDE LINES*/
 const lines = document.getElementsByClassName('text-line');
 let count = 0;
-let interval = 6000;
+let interval = 4000;
 
 //Show and hide lines automatically
 setInterval(function() {
@@ -46,9 +46,8 @@ setInterval(function() {
             line.style.display = 'inline';
             count++;
         }
-        changeInterval();                
+        window.scrollTo(0, document.body.scrollHeight);
     }
-    window.scrollTo(0, document.body.scrollHeight);
 }, interval)
 
 //Event listeners for left and right arrow (only used for actions, but can also be used in between, if necessary)
@@ -90,9 +89,16 @@ document.addEventListener('keydown', (e) => {
 
 /*OPEN NEXT STORY*/
 const stories = {
-    upgrade: 'metallic.html',
-    metallic: 'violin.html',
-    violin: 'index.html'
+    upgrade: 'circle.html',
+    circle: 'metallic.html',
+    metallic: 'radio.html',
+    radio: 'pong.html',
+    pong: 'funk.html',
+    funk: 'water.html',
+    water: 'ticking.html',
+    ticking: 'violin.html',
+    violin: 'flood.html',
+    flood: 'index.html'
 }
 
 let next = document.getElementById('next-story');
